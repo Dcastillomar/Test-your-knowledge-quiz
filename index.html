@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test your knowledge Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="homepage">
+            <h1> Test your knowledge of coding!</h1>
+        </div>
+
+        <div id="button">
+            <h2>Click below to start</h2>
+            <button id="startButton">Start</button>
+
+            <!--<div class="highscoreBoard">
+                <a class="active"></a>
+                <div id="highscoreBoard">
+                    <h3>Show the High Scores!</h3>
+                    <button id="highScore" onclick="Highscores()">Here are the High Scores!</button>
+                </div> -->
+
+                <div id="questions">
+                    <div id="timer">Hurry! Time left: </div>
+                    <div id="question">
+                        <p> Question: </p>
+                    </div>
+                    <button id="a" onclick="response('a')">a</button>
+                    <button id="a" onclick="response('b')">b</button>
+                    <button id="a" onclick="response('c')">c</button>
+                    <button id="a" onclick="response('d')">d</button>
+                    <div id="answers"></div>
+
+                </div>
+                <div id="userInitials">
+                    <p>Submit your Initials</p>
+                    <input type="text" placeholder="Enter you initials!" name="intials" id="initials"/>
+                        <button id="submitInitials" onclick="submitHere()"> Save!</button>
+                        </div>
+
+                </div>
+                <div id=scoreContainer>
+                    <div id="scorePage">
+                        <div id="header">
+                            <h4> Winner</h4>
+                            <h4> High Scores</h4>
+                        </div>
+                        <div id="winnerInitials">
+                            <div id="results"></div>
+                        </div>
+
+                        <div id="theEnd">
+                            <button id="restartGame" onclick="playAgain()"> Let's Play Again!</button>
+                        </div>
+                    </div>
+                </div>
+                <script src="script.js"></script>
+
+</body>
