@@ -14,7 +14,7 @@
             <h1> Test your knowledge of coding!</h1>
         </div>
 
-        <div id="button">
+        <div id="page-content">
             <h2>Click below to start</h2>
             <button id="startButton">Start</button>
 
@@ -25,42 +25,45 @@
                     <button id="highScore" onclick="Highscores()">Here are the High Scores!</button>
                 </div> -->
 
-                <div id="questions">
-                    <div id="timer">Hurry! Time left: </div>
-                    <div id="question">
-                        <p> Question: </p>
-                    </div>
-                    <button id="a" onclick="response('a')">a</button>
-                    <button id="b" onclick="response('b')">b</button>
-                    <button id="c" onclick="response('c')">c</button>
-                    <button id="d" onclick="response('d')">d</button>
-                    <div id="answers"></div>
-
+            <div id="questions">
+                <div id="timer"></div>
+                <div id="question-container">
+                    <p id="question-display"> Question: </p>
                 </div>
-                <div id="userInitials">
-                    <p>Submit your Initials</p>
-                    <input type="text" placeholder="Enter you initials!" name="intials" id="initials"/>
-                        <button id="submitInitials" onclick="submitHere()"> Save!</button>
-                        </div>
 
-                        <!--<div id ="score"></div> -->
-
+                <div id="answers">
+                    <button id="a" >a</button>
+                    <button id="b" >b</button>
+                    <button id="c" >c</button>
+                    <button id="d" >d</button>
                 </div>
-                <div id=scoreContainer>
-                    <div id="scorePage">
-                        <div id="header">
-                            <h4> Winner</h4>
-                            <h4> High Scores</h4>
-                        </div>
-                        <div id="winnerInitials">
-                            <div id="results"></div>
-                        </div>
 
-                        <div id="theEnd">
-                            <button id="restartGame" onclick="playAgain()"> Let's Play Again!</button>
-                        </div>
-                    </div>
+            </div>
+            <div id="userInitials">
+                <p>Submit your Initials</p>
+                <input type="text" placeholder="Enter you initials!" name="intials" id="initials" />
+                <button id="submitInitials" onclick="submitHere()"> Save!</button>
+            </div>
+
+            <!--<div id ="score"></div> -->
+
+        </div>
+        <div id=scoreContainer>
+            <div id="scorePage">
+                <div id="header">
+                    <h4> Winner</h4>
+                    <h4> High Scores</h4>
                 </div>
-                <script src="script.js"></script>
+                <div id="winnerInitials">
+                    <div id="results"></div>
+                </div>
+
+                <div id="theEnd">
+                    <button id="restartGame" onclick="playAgain()"> Let's Play Again!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 
 </body>
