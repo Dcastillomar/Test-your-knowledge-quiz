@@ -12,7 +12,7 @@ let bButton = document.getElementById("b");
 let cButton = document.getElementById("c");
 let dButton = document.getElementById("d");
 let questionDisplayEl = document.getElementById("question-display");
-let questionResponse=document.getElementById("response");
+let questionResponse = document.getElementById("response");
 
 
 
@@ -99,7 +99,6 @@ startButton.addEventListener("click", function () {
 
             if (time === 0) {
                 clearInterval(timerInterval);
-                showScore();
             }
         }, 1000);
     showQuestions();
@@ -117,8 +116,8 @@ function showAnswerChoices() {
     cButton.textContent = "C: " + gameQuestions[answerTracker].answers.c;
     dButton.textContent = "D: " + gameQuestions[answerTracker].answers.d;
 
-   
-    
+
+
 }
 
 
@@ -130,18 +129,18 @@ aButton.addEventListener("click", function () {
 
     if (correctAnswerResult === "a") {
         alert("Correct");
-        questionTracker= questionTracker + 1;
+        questionTracker = questionTracker + 1;
         showQuestions();
-    showAnswerChoices();
+        showAnswerChoices();
 
-    
+
     } else {
         alert("Incorrect");
         time = time - 15;
-        questionTracker= questionTracker + 1;
+        questionTracker = questionTracker + 1;
         showQuestions();
         showAnswerChoices();
-        
+
 
     }
 }
@@ -163,13 +162,13 @@ bButton.addEventListener("click", function () {
 cButton.addEventListener("click", function () {
     if (correctAnswerResult === "c") {
         alert("Correct")
-        questionTracker= questionTracker + 1;
+        questionTracker = questionTracker + 1;
         showQuestions();
         showAnswerChoices();
     } else {
         alert("Incorrect")
         time = time - 15;
-        questionTracker= questionTracker + 1;
+        questionTracker = questionTracker + 1;
         showQuestions();
         showAnswerChoices();
     }
@@ -179,22 +178,37 @@ cButton.addEventListener("click", function () {
 dButton.addEventListener("click", function () {
     if (correctAnswerResult === "d") {
         alert("Correct");
-        questionTracker= questionTracker + 1;
+        questionTracker = questionTracker + 1;
         showQuestions();
         showAnswerChoices();
-    } else{
+    } else {
         alert("Incorrect")
         time = time - 15;
-        questionTracker= questionTracker + 1;
+        questionTracker = questionTracker + 1;
         showQuestions();
         showAnswerChoices();
 
-}})
-
-function gameOver (){
-    if(time === 0){
-        alert("Game Over");
     }
-}
+})
 
+//write a function to have scorePage show
 
+//have intials save button work
+
+//play again button 
+restart.addEventListener("click", function () {
+
+    timerInterval = setInterval(
+        function () {
+            time--;
+            gameTimer.textContent = "Seconds Left" + time;
+
+            if (time === 0) {
+                clearInterval(timerInterval);
+            }
+        }, 1000);
+    showQuestions();
+    showAnswerChoices();
+
+});
+ 
